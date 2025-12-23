@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 
-// Importar videos
-import kalimaVideo from '../assets/vids/KALIMA.mp4'
-import neuroclickVideo from '../assets/vids/NEUROCLICK.mp4'
-import triviaVideo from '../assets/vids/TRIVIA.mp4'
-import icfesWebVideo from '../assets/vids/Aplicativo web flujo.mp4'
-import icfesMovilVideo from '../assets/vids/movil.mp4'
+// Importar videos usando rutas absolutas
+import kalimaVideo from '/src/assets/vids/KALIMA.mp4'
+import neuroclickVideo from '/src/assets/vids/NEUROCLICK.mp4'
+import triviaVideo from '/src/assets/vids/TRIVIA.mp4'
+import icfesWebVideo from '/src/assets/vids/Aplicativo web flujo.mp4'
+import icfesMovilVideo from '/src/assets/vids/movil.mp4'
 
 // Componente de video con velocidad personalizada
 const VideoPlayer = ({ src, playbackRate = 1, isMobile = false }) => {

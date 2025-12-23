@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
-# Videos grandes (subir manualmente o usar CDN)
-src/assets/vids/*.mp4
+# Video demasiado grande para GitHub (>100MB)
+src/assets/vids/movil.mp4
 
 # Editor directories and files
 .vscode/*

@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 
-// Importar videos
-import kalimaVideo from '../assets/vids/KALIMA.mp4'
-import neuroclickVideo from '../assets/vids/NEUROCLICK.mp4'
-import triviaVideo from '../assets/vids/TRIVIA.mp4'
-import icfesWebVideo from '../assets/vids/Aplicativo web flujo.mp4'
-// Video móvil muy grande - usar placeholder o CDN
-const icfesMovilVideo = icfesWebVideo // Usar el mismo video web como placeholder
+// Videos desde carpeta public (accesibles en producción)
+const kalimaVideo = '/vids/KALIMA.mp4'
+const neuroclickVideo = '/vids/NEUROCLICK.mp4'
+const triviaVideo = '/vids/TRIVIA.mp4'
+const icfesWebVideo = '/vids/Aplicativo web flujo.mp4'
+const icfesMovilVideo = icfesWebVideo // Placeholder para video móvil muy grande
 
 // Componente de video con velocidad personalizada
 const VideoPlayer = ({ src, playbackRate = 1, isMobile = false }) => {

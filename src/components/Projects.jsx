@@ -5,7 +5,8 @@ import kalimaVideo from '../assets/vids/KALIMA.mp4'
 import neuroclickVideo from '../assets/vids/NEUROCLICK.mp4'
 import triviaVideo from '../assets/vids/TRIVIA.mp4'
 import icfesWebVideo from '../assets/vids/Aplicativo web flujo.mp4'
-import icfesMovilVideo from '../assets/vids/movil.mp4'
+// Video móvil muy grande - usar placeholder o CDN
+const icfesMovilVideo = icfesWebVideo // Usar el mismo video web como placeholder
 
 // Componente de video con velocidad personalizada
 const VideoPlayer = ({ src, playbackRate = 1, isMobile = false }) => {

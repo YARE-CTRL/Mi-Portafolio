@@ -5,7 +5,7 @@ const kalimaVideo = '/vids/KALIMA.mp4'
 const neuroclickVideo = '/vids/NEUROCLICK.mp4'
 const triviaVideo = '/vids/TRIVIA.mp4'
 const icfesWebVideo = '/vids/Aplicativo web flujo.mp4'
-const icfesMovilVideo = icfesWebVideo // Placeholder para video móvil muy grande
+const icfesMovilVideo = '/vids/videomovil2.mp4'
 
 // Componente de video con velocidad personalizada
 const VideoPlayer = ({ src, playbackRate = 1, isMobile = false }) => {
@@ -203,11 +203,11 @@ const Projects = () => {
                   </div>
 
                   {/* Features Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
                     {project.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-gray-300 bg-white/5 rounded-xl px-4 py-3 border border-white/10">
-                        <span className="text-xl">{feature.icon}</span>
-                        <span className="text-sm">{feature.text}</span>
+                      <div key={idx} className="flex items-center gap-2 text-gray-300 bg-white/5 rounded-xl px-3 md:px-4 py-2 md:py-3 border border-white/10">
+                        <span className="text-lg md:text-xl">{feature.icon}</span>
+                        <span className="text-xs md:text-sm">{feature.text}</span>
                       </div>
                     ))}
                   </div>

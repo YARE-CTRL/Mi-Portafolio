@@ -66,8 +66,8 @@ const TechStack = () => {
   }
 
   return (
-    <section id="stack" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="stack" className="py-16 md:py-20 lg:py-24 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-blue-500 font-medium mb-2">Tecnologías</p>

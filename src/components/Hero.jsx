@@ -9,11 +9,11 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center">
         {/* Profile Image Placeholder */}
-        <div className="w-28 h-28 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 p-1">
+        <div className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-6 md:mb-8 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 p-1">
           <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-            <span className="text-3xl font-bold text-white">BH</span>
+            <span className="text-2xl md:text-3xl font-bold text-white">BH</span>
           </div>
         </div>
 

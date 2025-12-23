@@ -41,8 +41,8 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="about" className="py-16 md:py-20 lg:py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
           <p className="text-blue-500 font-medium mb-2">Sobre mí</p>
@@ -70,7 +70,7 @@ const About = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {features.map((feature, index) => (
             <div 
               key={index}

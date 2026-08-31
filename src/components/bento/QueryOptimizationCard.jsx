@@ -1,15 +1,13 @@
-const BEFORE = [
-  { label: "Arquitectura", value: "CSR Masivo", highlight: false },
-  { label: "FCP (First Contentful Paint)", value: "3.2s", highlight: false },
-  { label: "Bundle Size", value: "4.5MB", highlight: false },
-  { label: "TTI (Time to Interactive)", value: "3.8s", highlight: false },
+const CORE_TECH = [
+  { label: "Framework", value: "Next.js (App Router)" },
+  { label: "Estilos", value: "Tailwind CSS" },
+  { label: "Despliegue", value: "Vercel" },
 ];
 
-const AFTER = [
-  { label: "Arquitectura", value: "SSR + RSC", highlight: true },
-  { label: "FCP (First Contentful Paint)", value: "0.8s", highlight: true },
-  { label: "Bundle Size", value: "1.2MB", highlight: true },
-  { label: "TTI (Time to Interactive)", value: "0.9s", highlight: true },
+const INTEGRATIONS = [
+  { label: "Motor IA", value: "LLM Generativo" },
+  { label: "Base de Datos", value: "Notion API" },
+  { label: "Estado", value: "BETA (En Construcción)" },
 ];
 
 export default function QueryOptimizationCard() {
@@ -19,23 +17,23 @@ export default function QueryOptimizationCard() {
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
           <p className="font-mono text-xs text-zinc-600 tracking-widest uppercase mb-1">
-            Caso de Estudio · #01
+            Proyecto · 01
           </p>
           <h2 className="font-sans font-bold text-white text-lg md:text-xl leading-tight">
-            Optimización de Maquetación y Renderizado UI
+            Career OS
           </h2>
         </div>
         <span className="font-mono text-xs text-zinc-400 border border-zinc-700 px-2 py-1 tracking-widest uppercase flex-shrink-0">
-          React · Next.js
+          IA · Notion API
         </span>
       </div>
 
-      {/* Before / After table */}
+      {/* Tech / Integrations table */}
       <div className="grid grid-cols-2 gap-px bg-zinc-800 flex-1">
-        {/* Before */}
+        {/* Core Tech */}
         <div className="bg-black p-4 flex flex-col gap-3">
-          <p className="font-mono text-xs text-zinc-600 tracking-widest uppercase">Antes</p>
-          {BEFORE.map(({ label, value }) => (
+          <p className="font-mono text-xs text-zinc-600 tracking-widest uppercase">Stack Core</p>
+          {CORE_TECH.map(({ label, value }) => (
             <div key={label} className="flex flex-col xl:flex-row justify-between xl:items-baseline gap-1 xl:gap-2">
               <span className="font-mono text-xs text-zinc-600 truncate">{label}</span>
               <span className="font-mono text-xs text-zinc-400 flex-shrink-0">{value}</span>
@@ -43,10 +41,10 @@ export default function QueryOptimizationCard() {
           ))}
         </div>
 
-        {/* After */}
+        {/* Integrations */}
         <div className="bg-black p-4 flex flex-col gap-3">
-          <p className="font-mono text-xs text-green-400 tracking-widest uppercase">Después</p>
-          {AFTER.map(({ label, value }) => (
+          <p className="font-mono text-xs text-green-400 tracking-widest uppercase">Integraciones & IA</p>
+          {INTEGRATIONS.map(({ label, value }) => (
             <div key={label} className="flex flex-col xl:flex-row justify-between xl:items-baseline gap-1 xl:gap-2">
               <span className="font-mono text-xs text-zinc-600 truncate">{label}</span>
               <span className="font-mono text-xs text-green-400 font-bold flex-shrink-0">{value}</span>
@@ -55,23 +53,22 @@ export default function QueryOptimizationCard() {
         </div>
       </div>
 
-      {/* Latency bar */}
-      <div className="flex flex-col gap-2">
-        <div className="flex justify-between items-center">
-          <span className="font-mono text-xs text-zinc-600 tracking-widest uppercase">
-            Reducción de FCP
-          </span>
-          <span className="font-mono text-sm font-bold text-green-400">75%</span>
-        </div>
-        <div className="h-px bg-zinc-800 relative">
-          <div className="absolute top-0 left-0 h-px bg-green-400" style={{ width: "75%" }} />
-        </div>
-      </div>
-
       {/* Description */}
       <p className="font-mono text-xs text-zinc-600 leading-relaxed">
-        Refactorización de arquitectura monolítica a <code className="text-zinc-400">Next.js Server Components</code> basada en diseños precisos de Figma. Se minimizó la carga de JavaScript en el cliente mejorando el Core Web Vitals de forma drástica.
+        Plataforma que utiliza <code className="text-zinc-400">Inteligencia Artificial</code> para generar roadmaps de estudio hiper-personalizados y los organiza automáticamente creando bases de datos interactivas en tu workspace de Notion.
       </p>
+      
+      {/* Action / Link */}
+      <div className="pt-2 border-t border-zinc-800">
+        <a 
+          href="https://careeros-yare.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-2 font-mono text-xs text-zinc-400 hover:text-green-400 transition-colors"
+        >
+          <span className="text-green-400 group-hover:animate-pulse">›</span> [ VISITAR_PROYECTO_BETA ]
+        </a>
+      </div>
     </article>
   );
 }

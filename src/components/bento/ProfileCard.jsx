@@ -1,7 +1,7 @@
 const TIMELINE = [
-  { label: "Desarrollador Frontend & Datos", period: "2019 · present" },
-  { label: "Entornos de alta disponibilidad", period: null },
-  { label: "Remoto / Ciudad de México", period: null },
+  { label: "Desarrollo Frontend & Software Analytics", period: "presente" },
+  { label: "Maquetación interactiva & Arquitectura UI", period: null },
+  { label: "Cierre de prácticas profesionales", period: "Ago 2026" },
 ];
 
 export default function ProfileCard() {

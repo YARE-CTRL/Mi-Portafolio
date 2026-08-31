@@ -1,8 +1,9 @@
 const STEPS = [
-  { id: "01", name: "Ingesta", time: "1.2s", widthPct: 20 },
-  { id: "02", name: "Transform", time: "3.4s", widthPct: 55 },
-  { id: "03", name: "Validate", time: "5.9s", widthPct: 95 },
-  { id: "04", name: "Load", time: "0.1s", widthPct: 5 },
+  { id: "01", name: "Init Context Protocol", time: "140ms", widthPct: 15 },
+  { id: "02", name: "Agent Handshake & Auth", time: "320ms", widthPct: 25 },
+  { id: "03", name: "Vector Retrieval", time: "850ms", widthPct: 50 },
+  { id: "04", name: "LLM Synthesis", time: "2.1s", widthPct: 95 },
+  { id: "05", name: "UI State Update", time: "45ms", widthPct: 5 },
 ];
 
 export default function PipelineIngestionCard() {
@@ -14,10 +15,10 @@ export default function PipelineIngestionCard() {
           Caso de Estudio · #03
         </p>
         <h2 className="font-sans font-bold text-white text-lg md:text-xl leading-tight">
-          Data Ingestion Pipeline
+          Arquitectura Agent-to-Agent (A2A) &amp; MCP
         </h2>
         <p className="font-mono text-xs text-zinc-500 mt-1 tracking-wide">
-          12M registros/hora · PostgreSQL → ClickHouse
+          60% de reducción en latencia de respuestas dinámicas
         </p>
       </div>
 
@@ -29,7 +30,7 @@ export default function PipelineIngestionCard() {
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs text-zinc-700">{id}</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" aria-hidden="true" />
-                <span className="font-mono text-xs text-zinc-300">{name}</span>
+                <span className="font-mono text-xs text-zinc-300 truncate max-w-[150px] sm:max-w-none">{name}</span>
               </div>
               <span className="font-mono text-xs text-zinc-500">{time}</span>
             </div>

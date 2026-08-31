@@ -1,9 +1,8 @@
 const STEPS = [
-  { id: "01", name: "Init Context Protocol", time: "140ms", widthPct: 15 },
-  { id: "02", name: "Agent Handshake & Auth", time: "320ms", widthPct: 25 },
-  { id: "03", name: "Vector Retrieval", time: "850ms", widthPct: 50 },
-  { id: "04", name: "LLM Synthesis", time: "2.1s", widthPct: 95 },
-  { id: "05", name: "UI State Update", time: "45ms", widthPct: 5 },
+  { id: "01", name: "Supabase Magic Link", time: "Auth", widthPct: 20 },
+  { id: "02", name: "Resume PDF Parsing", time: "Storage", widthPct: 45 },
+  { id: "03", name: "Gemini JSON Structuring", time: "AI Engine", widthPct: 75 },
+  { id: "04", name: "Geographic Job Match", time: "Data", widthPct: 100 },
 ];
 
 export default function PipelineIngestionCard() {
@@ -12,15 +11,20 @@ export default function PipelineIngestionCard() {
       {/* Header */}
       <div>
         <p className="font-mono text-xs text-zinc-600 tracking-widest uppercase mb-1">
-          Caso de Estudio · #03
+          Proyecto · 02
         </p>
         <h2 className="font-sans font-bold text-white text-lg md:text-xl leading-tight">
-          Arquitectura Agent-to-Agent (A2A) &amp; MCP
+          LumiJob: AI Job Matcher
         </h2>
         <p className="font-mono text-xs text-zinc-500 mt-1 tracking-wide">
-          60% de reducción en latencia de respuestas dinámicas
+          Buscador inteligente de empleo remoto impulsado por Google Gemini.
         </p>
       </div>
+
+      {/* Description */}
+      <p className="font-mono text-xs text-zinc-400 leading-relaxed">
+        Analiza CVs en formato PDF utilizando LLMs deterministas para extraer fortalezas reales. Cruza el perfil estructurado en JSON con APIs globales, filtrando el ruido del mercado laboral.
+      </p>
 
       {/* Pipeline steps */}
       <div className="flex flex-col gap-3 flex-1">
@@ -43,6 +47,18 @@ export default function PipelineIngestionCard() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Action / Link */}
+      <div className="pt-2 border-t border-zinc-800">
+        <a 
+          href="https://lumijob.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-2 font-mono text-xs text-zinc-400 hover:text-green-400 transition-colors"
+        >
+          <span className="text-green-400 group-hover:animate-pulse">›</span> [ VISITAR_LUMIJOB ]
+        </a>
       </div>
     </article>
   );

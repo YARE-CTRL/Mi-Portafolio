@@ -14,9 +14,7 @@ export default function ProfileCard() {
 
       {/* Bio */}
       <p className="font-sans text-sm text-zinc-400 leading-relaxed">
-        Desarrollador Frontend &amp; Datos con enfoque en confiabilidad, rendimiento y
-        observabilidad de sistemas a escala. Especializado en identificar cuellos de
-        botella, reducir latencia P99 y construir pipelines que no fallan en producción.
+        Desarrollador e integrador con experiencia en soporte técnico L2/L3, resolución de incidencias complejas y análisis de datos mediante SQL. Especializado en la implementación de arquitecturas Agent-to-Agent (A2A), Model Context Protocol (MCP) y desarrollo frontend para optimizar flujos operativos.
       </p>
 
       {/* Timeline */}

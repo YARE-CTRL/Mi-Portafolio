@@ -1,17 +1,17 @@
 const BIG_STATS = [
-  { value: "28", label: "Pipelines en Producción" },
-  { value: "1.2B", label: "Data Points / Día" },
+  { value: "MCP", label: "Arquitecturas IA Generativa" },
+  { value: "SQL", label: "Diagnóstico & Cruce de Datos" },
 ];
 
 const COMMANDS = [
-  { id: "05", name: "dot run", time: "32s" },
-  { id: "06", name: "Notify", time: "0.1s" },
+  { id: "01", name: "Analizar requerimientos", time: "Validado" },
+  { id: "02", name: "Diagnóstico (PostgreSQL)", time: "100%" },
 ];
 
 const SUMMARY = [
-  { label: "TOTAL", value: "55.7s" },
-  { label: "PREV", value: "4m 12s" },
-  { label: "∆ GAIN", value: "78%" },
+  { label: "ROL", value: "Analista" },
+  { label: "NIVEL", value: "L2/L3" },
+  { label: "AÑO", value: "2026" },
 ];
 
 export default function PipelineMetricsCard() {

@@ -1,6 +1,6 @@
 const STATS = [
-  { value: "340+", label: "Queries Optimizadas" },
-  { value: "91%", label: "Reducción Promedio P99" },
+  { value: "100%", label: "Trazabilidad & Integridad de Datos (SQL)" },
+  { value: "L2/L3", label: "Soporte & Resolución de Incidencias" },
 ];
 
 export default function StatsCard() {

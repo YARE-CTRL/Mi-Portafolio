@@ -1,17 +1,18 @@
 const SQL_QUERY = `SELECT
-  c.customer_segment,
-  SUM(oi.revenue) AS total_revenue
-FROM orders o
-JOIN customers c USING (customer_id)
-JOIN order_items oi USING (order_id)
-WHERE o.created_at >= NOW() - INTERVAL '30 days'
-GROUP BY 1, 2
-ORDER BY 3 DESC;`;
+  p.policy_id,
+  c.client_id,
+  c.status AS client_status,
+  p.coverage_amount
+FROM policies p
+LEFT JOIN clients c USING (client_id)
+WHERE p.status = 'ACTIVE' 
+  AND c.status = 'INACTIVE'
+  AND p.created_at >= NOW() - INTERVAL '30 days';`;
 
-const RESULT_LINE = "Query returned 2,847 rows in 94ms";
+const RESULT_LINE = "Query returned 14 inconsistent records in 34ms";
 const PLAN_LINE =
-  "Execution plan: Index Scan on orders (cost=0.42..1.24 rows=1)";
-const BUFFER_LINE = "Buffers: shared hit=3 read=1 · Planning time: 0.8ms";
+  "Execution plan: Hash Join on policies & clients (cost=12.5..45.2)";
+const BUFFER_LINE = "Buffers: shared hit=42 read=5 · Planning time: 1.2ms";
 
 export default function SqlTerminalCard() {
   return (

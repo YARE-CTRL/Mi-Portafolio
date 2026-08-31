@@ -1,7 +1,7 @@
 const FOOTER_LINKS = [
-  { label: "Email", href: "mailto:hola@bhurtado.dev" },
+  { label: "Email", href: "mailto:bryandreshurtado2@gmail.com" },
   { label: "GitHub", href: "https://github.com/YARE-CTRL" },
-  { label: "LinkedIn", href: "#" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/bryan-hurtado-b13891364/" },
 ];
 
 // Replace with your real git commit SHA

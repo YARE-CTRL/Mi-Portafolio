@@ -26,8 +26,8 @@ const METRICS = [
 ];
 
 const TOOLS = {
-  tools: ["PagerDuty", "Grafana", "Loki"],
-  infra: ["K8s", "Prometheus", "ArgoCD"],
+  tools: ["Postman", "Google Workspace", "Jira"],
+  infra: ["PostgreSQL", "Oracle", "SQL"],
 };
 
 export default function MTTRCard() {

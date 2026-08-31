@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const NAV_LINKS = [
   { label: "GITHUB", href: "https://github.com/YARE-CTRL" },
-  { label: "LINKEDIN", href: "#" },
+  { label: "LINKEDIN", href: "https://www.linkedin.com/in/bryan-hurtado-b13891364/" },
   { label: "SRE", href: "#casos" },
   { label: "DATA", href: "#casos" },
   { label: "SQL", href: "#casos" },

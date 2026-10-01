@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "GITHUB", href: "https://github.com/YARE-CTRL" },
-  { label: "LINKEDIN", href: "https://www.linkedin.com/in/bryan-hurtado-b13891364/" },
-  { label: "SRE", href: "#casos" },
-  { label: "DATA", href: "#casos" },
-  { label: "SQL", href: "#casos" },
+  { label: "BLOG", href: "/blog", external: false },
+  { label: "PROYECTOS", href: "/proyectos", external: false },
+  { label: "TRAYECTORIA", href: "/trayectoria", external: false },
+  { label: "GITHUB", href: "https://github.com/YARE-CTRL", external: true },
+  { label: "LINKEDIN", href: "https://www.linkedin.com/in/bryan-hurtado-b13891364/", external: true },
 ];
 
 export default function Header() {
@@ -47,14 +48,25 @@ export default function Header() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-6" role="list">
-          {NAV_LINKS.map(({ label, href }) => (
+          {NAV_LINKS.map(({ label, href, external }) => (
             <li key={label}>
-              <a
-                href={href}
-                className="font-mono text-xs tracking-widest text-zinc-500 hover:text-green-400 transition-colors duration-200 uppercase"
-              >
-                {label}
-              </a>
+              {external ? (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs tracking-widest text-zinc-500 hover:text-green-400 transition-colors duration-200 uppercase"
+                >
+                  {label}
+                </a>
+              ) : (
+                <Link
+                  href={href}
+                  className="font-mono text-xs tracking-widest text-zinc-500 hover:text-green-400 transition-colors duration-200 uppercase"
+                >
+                  {label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -77,21 +89,29 @@ export default function Header() {
           role="menu"
         >
           <ul className="flex flex-col px-6 py-6 gap-1" role="list">
-            {NAV_LINKS.map(({ label, href }) => (
+            {NAV_LINKS.map(({ label, href, external }) => (
               <li key={label} role="none">
-                <a
-                  href={href}
-                  role="menuitem"
-                  onClick={handleLinkClick}
-                  className="
-                    block font-mono text-3xl font-bold tracking-widest
-                    text-zinc-400 hover:text-green-400
-                    transition-colors duration-150 uppercase py-2
-                    border-b border-zinc-900 last:border-0
-                  "
-                >
-                  {label}
-                </a>
+                {external ? (
+                  <a
+                    href={href}
+                    role="menuitem"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleLinkClick}
+                    className="block font-mono text-3xl font-bold tracking-widest text-zinc-400 hover:text-green-400 transition-colors duration-150 uppercase py-2 border-b border-zinc-900 last:border-0"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    href={href}
+                    role="menuitem"
+                    onClick={handleLinkClick}
+                    className="block font-mono text-3xl font-bold tracking-widest text-zinc-400 hover:text-green-400 transition-colors duration-150 uppercase py-2 border-b border-zinc-900 last:border-0"
+                  >
+                    {label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
